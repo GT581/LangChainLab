@@ -5,6 +5,9 @@ This module demonstrates different ways to use Chat Models in Langchain:
 1. Basic chat with system and human messages
 2. Using multiple messages in a conversation
 3. Using streaming for real-time responses
+
+Documentation:
+- https://python.langchain.com/docs/concepts/chat_models/
 """
 import os
 import sys
