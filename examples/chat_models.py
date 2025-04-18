@@ -8,6 +8,7 @@ This module demonstrates different ways to use Chat Models in Langchain:
 
 Documentation:
 - https://python.langchain.com/docs/concepts/chat_models/
+- https://python.langchain.com/api_reference/core/language_models/langchain_core.language_models.chat_models.BaseChatModel.html
 """
 import os
 import sys
@@ -16,6 +17,7 @@ import time
 from langchain.schema import HumanMessage, SystemMessage, AIMessage
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from utils.llm_utils import get_llm
 
 
