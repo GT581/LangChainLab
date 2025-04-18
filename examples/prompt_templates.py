@@ -11,6 +11,9 @@ Documentation:
 - https://python.langchain.com/docs/concepts/prompt_templates/
 - https://python.langchain.com/api_reference/core/prompts.html
 """
+import sys
+import os
+
 from langchain.prompts import (
     PromptTemplate, 
     ChatPromptTemplate, 
@@ -18,9 +21,8 @@ from langchain.prompts import (
 )
 from langchain.schema import HumanMessage, SystemMessage
 
-import sys
-import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 from utils.llm_utils import get_llm
 
 
