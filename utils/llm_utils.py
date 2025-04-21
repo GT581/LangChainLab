@@ -6,9 +6,10 @@ We will be using Google Gemini models due to the generous free tier on the API:
 
 Documentation:
 - https://python.langchain.com/docs/integrations/chat/google_generative_ai/
+- https://python.langchain.com/docs/integrations/text_embedding/google_generative_ai
 """
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 
 from utils.config import get_settings
 
@@ -28,4 +29,19 @@ def get_llm() -> ChatGoogleGenerativeAI:
         temperature=settings.LLM_TEMPERATURE,
         top_p=settings.LLM_TOP_P,
         max_output_tokens=settings.LLM_MAX_TOKENS,
+    )
+
+
+def get_embeddings() -> GoogleGenerativeAIEmbeddings:
+    """
+    Get a Gemini embeddings model instance
+    
+    Returns:
+        GoogleGenerativeAIEmbeddings: Configured Gemini embeddings instance
+    """
+    settings = get_settings()
+    
+    return GoogleGenerativeAIEmbeddings(
+        model=settings.GOOGLE_EMBED_MODEL_NAME,
+        google_api_key=settings.GOOGLE_API_KEY,
     )

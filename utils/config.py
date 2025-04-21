@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     # LLM Config - API Key loaded from .env
     GOOGLE_API_KEY: str
     GOOGLE_MODEL_NAME: str = "gemini-1.5-flash"
+    GOOGLE_EMBED_MODEL_NAME: str = "models/text-embedding-004"
 
     LLM_TEMPERATURE: float = 0.1
     LLM_TOP_P: float = 0.95
